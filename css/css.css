@@ -1,0 +1,52 @@
+
+        body {
+            background: url('https://images.pixexid.com/a-4k-ultra-hd-wallpaper-of-a-cat-dressed-in-a-librarians-outfit-surrounded-by-zlvdb8uk.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin-bottom: 200px; /* Adiciona um espaçamento no final de cada página */
+
+        }
+        /* Estilo para o container */
+        .custom-container {
+            background: rgba(0, 0, 0, 0.842);
+            padding: 20px; /* espaçamento interno do container */
+            margin-top: 50px; /* espaçamento superior do container */
+            border-radius: 10px; /* borda arredondada do container */
+            margin-bottom: 200px; /* Adiciona um espaçamento no final de cada página */
+            text-align: center;
+        }
+        .sobre {
+            background: rgba(0, 0, 0, 0.842);
+            padding: 20px; /* espaçamento interno do container */
+            margin-top: 50px; /* espaçamento superior do container */
+            border-radius: 10px; /* borda arredondada do container */
+            margin-bottom: 200px; /* Adiciona um espaçamento no final de cada página */
+            color: white;
+            text-align: justify;
+        }
+        /* Adicione um espaçamento entre os componentes */
+        .component-spacing {
+            margin-top: 20px;
+        }
+
+        /* Defina uma altura fixa para os itens do carrossel */
+        .carousel-item img {
+            height: 400px; /* Ajuste a altura conforme necessário */
+            object-fit: cover; /* Para manter a proporção da imagem e cobrir completamente o espaço */
+        }
+
+        /* Ajuste a altura das imagens dos cards */
+        .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+        .welcome-text {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            margin-top: 30; /* Ajuste conforme necessário */
+            
+        }
+        .sobre {
+            margin: 20px;
+        }
