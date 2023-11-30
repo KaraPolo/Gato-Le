@@ -4,7 +4,7 @@ Projeto final desenvolvido para a aula de Programação Web 1 com PHP 2023.2
 ## Comandos básicos Git
 
 **Clonar projeto**  
-`git clone URL_PROJETO`
+`git clone https://github.com/KaraPolo/Gato-Le.git`
 
 **Adicionar todos arquivos para serem versionados**  
 `git add .`
@@ -12,7 +12,7 @@ Projeto final desenvolvido para a aula de Programação Web 1 com PHP 2023.2
 **Commitar o arquivo para ser versionados**  
 `git commit -m "Sua mensagem"`
 
-**Enviar as alterações para o repositorio remoto do Git**  
+**Enviar as alterações para o repositorio resmoto do Git**  
 `git push`
 
 **Atualizar arquivos do projeto local de acordo com o repositorio do Git remoto**  
