@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29/11/2023 às 08:58
+-- Tempo de geração: 01/12/2023 às 03:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,28 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `db_aula_pweb1`
 --
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `aluno`
---
-
-CREATE TABLE `aluno` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `nome` varchar(100) NOT NULL DEFAULT '0',
-  `autor` varchar(30) NOT NULL DEFAULT '0',
-  `ano` varchar(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
---
--- Despejando dados para a tabela `aluno`
---
-
-INSERT INTO `aluno` (`id`, `nome`, `autor`, `ano`) VALUES
-(48, 'As Aventuras de Pi', 'Nem sei', '2023'),
-(49, 'admin', 'AA', '2023'),
-(50, 'Viagem ao Centro da Depressão', 'IFSC', '2020');
 
 -- --------------------------------------------------------
 
@@ -194,7 +172,8 @@ CREATE TABLE `comentarioharry` (
 
 INSERT INTO `comentarioharry` (`id`, `nota`, `personagem`, `coment`) VALUES
 (1, 10, 'Algum', 'Muito bao'),
-(2, 10, 'Algum', 'Muito bao');
+(2, 10, 'Algum', 'Muito bao'),
+(3, 1, 'Draco ', 'JK é uma pessoa horrivel');
 
 -- --------------------------------------------------------
 
@@ -214,9 +193,14 @@ CREATE TABLE `comentarioit` (
 --
 
 INSERT INTO `comentarioit` (`id`, `nota`, `personagem`, `coment`) VALUES
-(1, 10, 'George', 'Muito bao'),
-(2, 10, 'George', 'Muito bao'),
-(3, 10, 'Algum', 'Muito bao');
+(3, 10, 'Algum', 'Muito bao lopp'),
+(6, 1, '123', '123'),
+(7, 10, 'Algum', 'Muito bao'),
+(8, 10, 'ww', 'quero quero '),
+(9, 9, 'Algum', 'Muito bao'),
+(10, 10, 'it', 'sei lá'),
+(11, 0, 'sd', 'sd'),
+(12, 10, 'George', 'kjouiuio');
 
 -- --------------------------------------------------------
 
@@ -320,6 +304,45 @@ CREATE TABLE `mensagem` (
   `tipo2` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
+--
+-- Despejando dados para a tabela `mensagem`
+--
+
+INSERT INTO `mensagem` (`id`, `nome`, `email`, `msg`, `sobrenome`, `telefone1`, `tipo1`, `telefone2`, `tipo2`) VALUES
+(1, 'Amanda', 'Amanda@gmail.com', 'as', 'Polo', '12345', 'celular', '12345', '54321'),
+(2, 'Amanda', 's@gmail.com', 'qwqeqw', 'Polo', '12345', 'celular', '12345', '54321432'),
+(3, 'Amanda', 's@gmail.com', 'as', 'Polo', '12345', 'celular', '12345', '54321'),
+(4, 'Amanda', 's@gmail.com', 'pelo amor de deus funcione', 'Polo', '12345', 'celular', '12345', '54321'),
+(5, 'Amanda', 's@gmail.com', 'Professor, pelo amor de god, da um 10 pra gente vai', 'Polo', '12345', 'celular', '12345', 'celular'),
+(6, 'a', 's@gmail.com', 'assd', 'a', '12345', 'celular', '12345', '54321'),
+(7, 'as', 's@gmail.com', 'asd', 'asd', 'ad', 'asd', '12345657', 'asd');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `sugestao`
+--
+
+CREATE TABLE `sugestao` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `nome` varchar(100) NOT NULL DEFAULT '0',
+  `autor` varchar(30) NOT NULL DEFAULT '0',
+  `ano` varchar(20) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Despejando dados para a tabela `sugestao`
+--
+
+INSERT INTO `sugestao` (`id`, `nome`, `autor`, `ano`) VALUES
+(48, 'As Aventuras de Pi', 'Nem sei', '2023'),
+(49, 'admin', 'AA', '2023'),
+(50, 'Viagem ao Centro da Depressão', 'IFSC', '2020'),
+(51, 'Quero me jogar de uma escada de 1 metro', 'Amanda', '2023'),
+(52, 'O pesadelo que é estudar no IFSC, nao ta escrito', 'Stephen King', '2023'),
+(53, 'as', 'asd', '1'),
+(54, 'sdsd', 'sdsd', '1234');
+
 -- --------------------------------------------------------
 
 --
@@ -341,17 +364,13 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nome`, `telefone`, `email`, `senha`, `usuario`) VALUES
 (6, 'admin', '12312312', 's@gmail.com', '$2y$10$zieva43fga5iw1GsyR36zu5YGP7GsohEYTGMb3PuQ3lPmKP6q9P6e', 'admin'),
-(7, 'admin', '12312312', 's@gmail.com', '$2y$10$eylBAZE7vjCF6U5.TsUUieO3Iisn9FT/2LW36/flWT5KBLOep0ZZq', 'admin');
+(7, 'admin', '12312312', 's@gmail.com', '$2y$10$eylBAZE7vjCF6U5.TsUUieO3Iisn9FT/2LW36/flWT5KBLOep0ZZq', 'admin'),
+(8, 'Amanda', '1234', 's@gmail.com', '$2y$10$j2hLJuUQtR8x39R9/H3IPetdi4zEJIcpeR99lEhX1yccNQ2dYNzeO', 'amanda'),
+(9, 'polo', '123', 's@gmail.com', '$2y$10$cj5W41gmHVMmvUBuZJa4F.6EuOsH7wYLQ7KIQjs3MEPCrdqpACmnq', 'polo');
 
 --
 -- Índices para tabelas despejadas
 --
-
---
--- Índices de tabela `aluno`
---
-ALTER TABLE `aluno`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices de tabela `comentarioalita`
@@ -426,6 +445,18 @@ ALTER TABLE `comentariotronos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `mensagem`
+--
+ALTER TABLE `mensagem`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `sugestao`
+--
+ALTER TABLE `sugestao`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
@@ -434,12 +465,6 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
-
---
--- AUTO_INCREMENT de tabela `aluno`
---
-ALTER TABLE `aluno`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de tabela `comentarioalita`
@@ -481,13 +506,13 @@ ALTER TABLE `comentarioexorcista`
 -- AUTO_INCREMENT de tabela `comentarioharry`
 --
 ALTER TABLE `comentarioharry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `comentarioit`
 --
 ALTER TABLE `comentarioit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `comentariolua`
@@ -514,10 +539,22 @@ ALTER TABLE `comentariotronos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de tabela `mensagem`
+--
+ALTER TABLE `mensagem`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de tabela `sugestao`
+--
+ALTER TABLE `sugestao`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

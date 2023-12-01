@@ -7,15 +7,15 @@
     $db->conn();
     
     if(!empty($_POST['id'])){
-        $db->update("aluno", $_POST);
+        $db->update("sugestao", $_POST);
         header("location: SugestaoList.php");
     }
     else if($_POST){
-        $db->insert("aluno", $_POST);
+        $db->insert("sugestao", $_POST);
         header("location: SugestaoList.php");
     }
     if(!empty($_GET['id'])){
-        $aluno = $db->find("aluno", $_GET['id']);
+        $sugestao = $db->find("sugestao", $_GET['id']);
     }
 ?>
  <div class="sobre">
@@ -23,21 +23,21 @@
 <div class="container mt-5">
     <h3>Sugestão de Livro:</h3>
     <form action="SugestaoForm.php" method="post">
-        <input type="hidden" name="id" value="<?php echo !empty($aluno->id) ? $aluno->id : "" ?>" class="form-control"><br>
+        <input type="hidden" name="id" value="<?php echo !empty($sugestao->id) ? $sugestao->id : "" ?>" class="form-control"><br>
 
         <div class="form-group">
             <label for="nome">Nome do Livro</label>
-            <input type="text" required name="nome" placeholder="Digite o nome do livro..." value="<?php echo !empty($aluno->nome) ? $aluno->nome : "" ?>" class="form-control">
+            <input type="text" required name="nome" required placeholder="Digite o nome do livro..." value="<?php echo !empty($sugestao->nome) ? $sugestao->nome : "" ?>" class="form-control">
         </div>
 
         <div class="form-group">
             <label for="autor">Autor</label>
-            <input type="text" name="autor" placeholder="Digite o autor..." required value="<?php echo !empty($aluno->autor) ? $aluno->autor : "" ?>" class="form-control">
+            <input type="text" name="autor" required placeholder="Digite o autor..." required value="<?php echo !empty($sugestao->autor) ? $sugestao->autor : "" ?>" class="form-control">
         </div>
 
         <div class="form-group">
             <label for="ano">Ano de Publicação</label>
-            <input type="number" name="ano" placeholder="Digite o ano de publicação..." required value="<?php echo !empty($aluno->ano) ? $aluno->ano : "" ?>" class="form-control">
+            <input type="number" name="ano" required placeholder="Digite o ano de publicação..." required value="<?php echo !empty($sugestao->ano) ? $sugestao->ano : "" ?>" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary"><?php echo !empty($_GET['id']) ? "Editar" : "Salvar"?></button>

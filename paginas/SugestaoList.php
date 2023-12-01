@@ -8,14 +8,14 @@
     $db->conn();
 
     if(!empty($_GET['id'])){
-        $db->destroy("aluno", $_GET['id']);
+        $db->destroy("sugestao", $_GET['id']);
         header("location: SugestaoList.php");
     }
 
     if(!empty($_POST)){
-        $dados =  $db->search("aluno", $_POST);
+        $dados =  $db->search("sugestao", $_POST);
     } else {
-        $dados = $db->select("aluno");
+        $dados = $db->select("sugestao");
     }
 ?>
 
@@ -60,8 +60,10 @@
         </tbody>
     </table>
 </div>
-
-<?php include "../bases/footer.php" ?>
-
+<div class="component-spacing"></div>
+        <div class="component-spacing"></div>        
+        <div class="component-spacing"></div>
+        <div class="component-spacing"></div>
+        <?php include "../bases/footer.php" ?>
 </body>
 </html>

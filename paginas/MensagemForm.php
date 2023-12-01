@@ -63,6 +63,7 @@
         </div>
         <center>
             <button type="submit" class="btn btn-primary"><?php echo !empty($_GET['id']) ? "Editar" : "Enviar Mensagem"?></button>
+        <a href="MensagemList.php" class="btn btn-secondary">Voltar</a>
         </center>
     </form>
 </div>
